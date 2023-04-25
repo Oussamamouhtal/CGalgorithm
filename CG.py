@@ -16,8 +16,9 @@ def CG(A, b, tol, maxit):
         maxit : maximum number of iterations
         tol   : error tolerance on the residual 
     """
-    start_time = time.time()      # start timing the execution
+    
     xstar = np.linalg.solve(A, b)   # compute the exact solution
+    start_time = time.time()      # start timing the execution
     flag = 0                      # initialize a flag variable to check if the algorithm converged
     r = b                         # set the initial residual to b
     p = b                         # set the initial search direction to b
